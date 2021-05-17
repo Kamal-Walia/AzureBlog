@@ -22,7 +22,7 @@ app.logger.setLevel(logging.INFO) # add log level from Warning and above
 streamHandler = logging.StreamHandler()
 streamHandler.setLevel(logging.WARNING)
 app.logger.addHandler(streamHandler) # add stream hanlder to app.logger object
-
+app.logger.setLevel(logging.WARNING)
 Session(app)
 db = SQLAlchemy(app)
 login = LoginManager(app)
